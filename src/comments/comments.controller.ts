@@ -9,7 +9,6 @@ import {
   Patch,
   ParseIntPipe,
   Req,
-
   UseGuards,
 } from '@nestjs/common';
 import { CommentsService } from './comments.service';
@@ -25,7 +24,6 @@ import {
   ApiBearerAuth,
 } from '@nestjs/swagger';
 import { CommentEntity } from './entities/comment.entity';
-import { GoogleOauthGuard } from 'src/auth-google/google-auth.guard';
 import { Users } from '@prisma/client';
 import { JwtAuthGuard } from 'src/auth-basic/jwt-auth.guard';
 interface RequestWithUser extends Request {
@@ -40,7 +38,6 @@ interface RequestWithUser extends Request {
 @ApiResponse({ status: 500, description: '서버에러' })
 @Controller('cards/:cardId/comments')
 @ApiTags('comments')
-@UseGuards(GoogleOauthGuard)
 export class CommentsController {
   constructor(private readonly commentsService: CommentsService) {}
 

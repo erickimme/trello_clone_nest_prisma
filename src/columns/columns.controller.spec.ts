@@ -41,7 +41,6 @@ describe('ColumnsController', () => {
         name: '새 컬럼',
         order: 1,
         boardId: 1,
-        userId: 1,
         createdAt: undefined,
         updatedAt: undefined,
       };

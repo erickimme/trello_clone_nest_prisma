@@ -1,10 +1,12 @@
+//src/main.ts
+
 import { ClassSerializerInterceptor, ValidationPipe } from '@nestjs/common';
 import { NestFactory, Reflector } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { NestExpressApplication } from '@nestjs/platform-express';
-import { join, resolve } from 'path';
-import * as dotenv from 'dotenv';
+import { join } from 'path';
+// import * as dotenv from 'dotenv';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
@@ -15,6 +17,7 @@ async function bootstrap() {
   );
   app.setViewEngine('hbs');
   // Enable CORS for frontend
+
   app.enableCors({
     origin: 'http://localhost:3001', // Adjust this to your frontend application's URL
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
