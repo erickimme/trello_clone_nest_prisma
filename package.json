@@ -10,7 +10,7 @@
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "concurrently \"npm run start:server\" \"npm run start:client\"",
     "start:server": "nest start",
-    "start:client": "cd /Users/adam/trello_clone_nest_prisma/frontend && PORT=3001 npm start",
+    "start:client": "cd /Users/erickim/Desktop/nestjs/trello_clone_nest_prisma/frontend && PORT=3001 npm start",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",

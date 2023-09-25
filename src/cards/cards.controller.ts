@@ -12,12 +12,9 @@ import {
 import { CardsService } from './cards.service';
 import { CardDto } from './dto/cards.dto';
 import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
-
-@ApiTags('Cards')
-@ApiResponse({ status: 500, description: '서버에러' })
-import { ApiTags } from '@nestjs/swagger';
 import { GoogleOauthGuard } from 'src/auth-google/google-auth.guard';
 
+@ApiResponse({ status: 500, description: '서버에러' })
 @ApiTags('Cards')
 @UseGuards(GoogleOauthGuard)
 @Controller('columns/:columnId/cards')

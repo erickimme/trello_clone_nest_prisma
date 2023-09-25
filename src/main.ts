@@ -5,14 +5,9 @@ import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { join, resolve } from 'path';
 import * as dotenv from 'dotenv';
-import session from 'express-session';
-
-
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
-
-
 
   app.useStaticAssets(join('..', 'trello_clone_nest_prisma', 'public'));
   app.setBaseViewsDir(
@@ -47,7 +42,7 @@ async function bootstrap() {
   // Enable shutdown hooks for graceful shutdowns
   app.enableShutdownHooks();
 
-  await app.listen(4000);
+  await app.listen(3000);
 }
 
 bootstrap();
