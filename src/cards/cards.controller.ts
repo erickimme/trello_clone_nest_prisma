@@ -7,21 +7,14 @@ import {
   Param,
   Body,
   NotFoundException,
-  UseGuards,
 } from '@nestjs/common';
 import { CardsService } from './cards.service';
 import { CardDto } from './dto/cards.dto';
 import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
-<<<<<<< HEAD
-import { GoogleOauthGuard } from 'src/auth-google/google-auth.guard';
-=======
-
->>>>>>> 1d7676a4d1cc5b22631432d43181819ae0734ed3
 
 @ApiResponse({ status: 500, description: '서버에러' })
 @ApiTags('Cards')
 @ApiResponse({ status: 500, description: '서버에러' })
-
 @Controller('columns/:columnId/cards')
 export class CardsController {
   constructor(private readonly cardsService: CardsService) {}

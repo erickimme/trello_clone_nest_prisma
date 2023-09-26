@@ -10,18 +10,14 @@ import {
   IsNotEmpty,
 } from 'class-validator';
 export class CreateColumnDto {
-  @ApiProperty({
-    example: 'New Column',
-  })
+  @ApiProperty()
   @IsString()
   @IsNotEmpty()
   @MinLength(1)
   @MaxLength(30)
   readonly name: string;
 
-  @ApiProperty({
-    example: 1,
-  })
+  @ApiProperty()
   @IsNumber()
   readonly order: number;
 
@@ -30,12 +26,7 @@ export class CreateColumnDto {
   @IsNotEmpty()
   readonly boardId: number;
 
-  @ApiProperty({
-    example: 1,
-  })
-  @ApiProperty({
-    example: new Date(),
-  })
+  @ApiProperty()
   createdAt: Date;
 
   @ApiProperty()

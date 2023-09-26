@@ -29,6 +29,9 @@ const NavBar = () => {
             <button onClick={() => console.log('Sign Up Clicked')}>
               Sign Up
             </button>
+            <button onClick={() => console.log('My Page Clicked')}>
+              My Page
+            </button>
           </>
         )}
       </div>
